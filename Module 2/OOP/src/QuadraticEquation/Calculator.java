@@ -15,12 +15,20 @@ public class Calculator {
         System.out.println("Nhập c:");
         double c = scan.nextDouble();
 
-        QuadraticEquation calculator = new QuadraticEquation(a, b, c);
+        QuadraticEquation cal = new QuadraticEquation(a, b, c);
 
-        double delta = calculator.getDiscriminant();
-        double root1 = calculator.getRoot1();
-        double root2 = calculator.getRoot2();
+        double delta = cal.getDiscriminant();
+        double root1 = cal.getRoot1();
+        double root2 = cal.getRoot2();
 
-        System.out.println(root1);
+        if (delta > 0) {
+            System.out.println(root1 + root2 );
+        }
+        else if (delta == 0) {
+            System.out.println("Hai nghiệm bằng nhau " + root1);
+        }
+        else {
+            System.out.println("Phương trình vô nghiệm");
+        }
     }
 }
