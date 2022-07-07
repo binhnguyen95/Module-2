@@ -15,6 +15,5 @@ public class Merge {
             }
             System.out.print(arr3[i] + " ");
         }
-
     }
     }

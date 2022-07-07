@@ -16,6 +16,9 @@ public class Delete {
     public static int[] deleteByIndex(int[] array, int index) {
         int n = array.length;
         int newArray[] = new int[n-1];
+        if ( index < 0) {
+            System.out.println("Fail");
+        }
         for (int i = 0; i < index; i++) {
             newArray[i] = array[i];
         }
